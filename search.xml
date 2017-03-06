@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[one]]></title>
+      <url>YOUR_SITE/2017/03/06/one/</url>
+      <content type="html"><![CDATA[<p>����һ�����Ե��ļ�one</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>YOUR_SITE/2017/03/06/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Mone]]></title>
+      <url>YOUR_SITE/2017/03/02/Mone/</url>
+      <content type="html"><![CDATA[<h2 id="crontab命令"><a href="#crontab命令" class="headerlink" title="crontab命令"></a>crontab命令</h2><p>[TOC]</p>
+<p> 　　<strong>crontab</strong>命令被用来提交和管理用户的需要周期性执行的任务，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。cron是一个常驻服务，它提供计时器的功能，让用户在特定的时间得以执行预设的指令或程序。<br><a id="more"></a></p>
+<p><strong>at </strong>适合仅执行一次就结束的调度命令，需要启动一个后端的atd服务。<br><strong>crontab </strong>需要启动一个服务crond才行，crond服务通过crontab命令实现。<br><strong>anacron </strong>无法周期性执行，只能以天为周期，但有个特点，在关机状态下未执行的任务，下次开机时可以补上执行<br><strong>注：crontab为最常用的定时任务。</strong></p>
+<h3 id="安装crontab"><a href="#安装crontab" class="headerlink" title="安装crontab:"></a>安装crontab:</h3><blockquote>
+<p>yum install crontabs</p>
+</blockquote>
+<h3 id="服务相关"><a href="#服务相关" class="headerlink" title="服务相关"></a>服务相关</h3><h5 id="Centos6-0"><a href="#Centos6-0" class="headerlink" title="Centos6.0"></a>Centos6.0</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/sbin/service crond start //启动服务</div><div class="line">/sbin/service crond stop //关闭服务</div><div class="line">/sbin/service crond restart //重启服务</div><div class="line">/sbin/service crond reload //重新载入配置</div><div class="line">/sbin/service crond status //查看crontab服务状态</div><div class="line">查看crontab服务是否已设置为开机启动，执行命令：ntsysv</div><div class="line">chkconfig –level 35 crond on //加入开机自动启动</div></pre></td></tr></table></figure>
+<h5 id="Centos7-0"><a href="#Centos7-0" class="headerlink" title="Centos7.0"></a>Centos7.0</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">启动服务（等同于service crond start）</div><div class="line">systemctl start crond.service</div><div class="line">停止服务（等同于service crond stop）</div><div class="line">systemctl stop crond.service</div><div class="line">重启服务（等同于service crond restart）</div><div class="line">systemctl restart crond.service</div><div class="line">查看服务是否运行（等同于service crond status）</div><div class="line">systemctl status crond.service</div><div class="line">开机自启动服务（等同于chkconfig crond on）</div><div class="line">systemctl enable crond.service</div><div class="line">开机时禁用服务（等同于chkconfig crond on）</div><div class="line">systemctl disable crond.service</div><div class="line">查看服务是否开机启动 （等同于chkconfig --list）</div><div class="line">systemctl is-enabled crond.service</div><div class="line">重新加载服务配置文件</div><div class="line">systemctl reload crond.service</div></pre></td></tr></table></figure>
+<h3 id="命令语法"><a href="#命令语法" class="headerlink" title="命令语法"></a>命令语法</h3><blockquote>
+<p>crontab(选项)(参数)</p>
+</blockquote>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><ul>
+<li><code>-e</code> 编辑该用户的计时器设置；</li>
+<li><code>-l</code> 列出该用户的计时器设置；</li>
+<li><code>-r</code> 删除该用户的计时器设置；</li>
+<li><code>-u&lt;用户名称&gt;</code> 指定要设定计时器的用户名称。</li>
+</ul>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><blockquote>
+<p>crontab文件：指定包含待执行任务的crontab文件。</p>
+</blockquote>
+<h4 id="知识扩展"><a href="#知识扩展" class="headerlink" title="知识扩展"></a>知识扩展</h4><p>　　在LINUX中，周期执行的任务一般由cron这个守护进程来处理[ps -ef|grep cron]。cron读取一个或多个配置文件，这些配置文件中包含了命令行及其调用时间。<br><strong>cron的配置文件称为“crontab”，是“cron table”的简写。</strong><br><strong>cron在3个地方查找配置文件：</strong></p>
+<ul>
+<li>/var/spool/cron/ 这个目录下存放的是每个用户包括root的crontab任务，每个任务以创建者的名字命名，比如tom建的crontab任务对应的文件就是/var/spool/cron/tom。一般一个用户最多只有一个crontab文件。</li>
+<li>/etc/crontab 这个文件负责安排由系统管理员制定的维护系统以及其他任务的crontab。</li>
+<li>/etc/cron.d/ 这个目录用来存放任何要执行的crontab文件或脚本。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">[root@MLibra ~]# cat /etc/crontab</div><div class="line">SHELL=/bin/bash</div><div class="line">PATH=/sbin:/bin:/usr/sbin:/usr/bin</div><div class="line">MAILTO=root</div><div class="line"></div><div class="line"># For details see man 4 crontabs</div><div class="line"></div><div class="line"># Example of job definition:</div><div class="line"># .---------------- minute (0 - 59)</div><div class="line"># |  .------------- hour (0 - 23)</div><div class="line"># |  |  .---------- day of month (1 - 31)</div><div class="line"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</div><div class="line"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</div><div class="line"># |  |  |  |  |</div><div class="line"># *  *  *  *  * user-name  command to be executed</div></pre></td></tr></table></figure>
+<ul>
+<li>四行是用来配置crond任务运行的环境变量</li>
+<li>第一行SHELL变量指定了系统要使用哪个shell，这里是bash。</li>
+<li>第二行PATH变量指定了系统执行命令的路径。</li>
+<li>第三行MAILTO变量指定了crond的任务执行信息将通过电子邮件发送给root用户，如果MAILTO变量的值为空，则表示不发送任务执行信息给用户</li>
+</ul>
+<p>　　<strong>用户任务调度</strong>：用户定期要执行的工作，比如用户数据备份、定时邮件提醒等。用户可以使用 crontab 工具来定制自己的计划任务。所有用户定义的crontab文件都被保存在<code>/var/spool/cron</code>目录中,其文件名与用户名一致。</p>
+<h4 id="crond定时任务限权"><a href="#crond定时任务限权" class="headerlink" title="crond定时任务限权"></a>crond定时任务限权</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/etc/cron.deny 该文件中所列用户不允许使用crontab命令</div><div class="line">/etc/cron.allow 该文件中所列用户允许使用crontab命令</div><div class="line">/var/spool/cron/ 所有用户crontab文件存放的目录,以用户名命名</div></pre></td></tr></table></figure>
+<ul>
+<li>如果两个文件都不存在，则只有root用户才能使用crontab命令。</li>
+<li>如果cron.allow存在但cron.deny不存在，则只有列在cron.allow文件里的用户才能使用crontab命令，如果root用户也不在里面，则root用户也不能使用crontab。</li>
+<li>如果cron.allow不存在, cron.deny存在，则只有列在cron.deny文件里面的用户不能使用crontab命令，其它用户都能使用。</li>
+<li>如果两个文件都存在，则列在cron.allow文件中而且没有列在cron.deny中的用户可以使用crontab，如果两个文件中都有同一个用户，以cron.allow文件里面是否有该用户为准，如果cron.allow中有该用户，则可以使用crontab命令。</li>
+</ul>
+<h5 id="允许测试"><a href="#允许测试" class="headerlink" title="允许测试"></a>允许测试</h5><p>在cron.allow中加入用户后，该用户能编辑定时任务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@test ~]# cat /etc/cron.allow</div><div class="line">test</div><div class="line">[root@test ~]# su - test</div><div class="line">[test@test ~]$ crontab -e   #&lt;==test用户编辑成功</div><div class="line">*/1 * * * * echo successful &gt;/tmp/a.log</div><div class="line">[test@test ~]$ crontab -l</div><div class="line">*/1 * * * * echo successful &gt;/tmp/a.log</div></pre></td></tr></table></figure></p>
+<h5 id="清空允许用户"><a href="#清空允许用户" class="headerlink" title="清空允许用户"></a>清空允许用户</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[test@test ~]$ su - root</div><div class="line">Password:</div><div class="line">[root@test ~]# echo &gt;/etc/cron.allow</div><div class="line">[root@test ~]# su - test</div><div class="line">[test@test ~]$ crontab -l  #&lt;==test用户连查看的权限都没有</div><div class="line">You (test)are not allowed to use this program (crontab)</div><div class="line">See crontab(1) for more information</div><div class="line">[test@test ~]$ cat /etc/cron.deny</div><div class="line">test</div></pre></td></tr></table></figure>
+<p>清空cron.allow允许用户后，该用户又被cron.deny拒绝，**得出结论：<code>/etc/cron.allow</code>优先于<code>/etc/cron.deny</code>配置</p>
+<blockquote>
+<p><strong>每次编辑完某个用户的cron设置后，cron自动在/var/spool/cron下生成一个与此用户同名的文件，此用户的cron信息都记录在这个文件中，这个文件是不可以直接编辑的，只可以用crontab -e 来编辑。cron启动后每过一份钟读一次这个文件，检查是否要执行里面的命令。因此此文件修改后不需要重新启动cron服务。</strong></p>
+</blockquote>
+<h4 id="crontab文件的含义"><a href="#crontab文件的含义" class="headerlink" title="crontab文件的含义"></a>crontab文件的含义</h4><p>用户所建立的crontab文件中，每一行都代表一项任务，每行的每个字段代表一项设置，它的格式共分为六个字段，前五段是时间设定段，第六段是要执行的命令段</p>
+<blockquote>
+<p>格式如下： minute hour day month day week command</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">[root@MLibra ~]# cat /etc/crontab</div><div class="line"></div><div class="line"># Example of job definition:</div><div class="line"># .---------------- minute (0 - 59)</div><div class="line"># |  .------------- hour (0 - 23)</div><div class="line"># |  |  .---------- day of month (1 - 31)</div><div class="line"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</div><div class="line"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</div><div class="line"># |  |  |  |  |</div><div class="line"># *  *  *  *  * user-name  command to be executed</div></pre></td></tr></table></figure>
+<h5 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h5><table>
+<thead>
+<tr>
+<th>minute： 表示分钟，可以是从0到59之间的任何整数。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hour：表示小时，可以是从0到23之间的任何整数。</td>
+</tr>
+<tr>
+<td>day：表示日期，可以是从1到31之间的任何整数。</td>
+</tr>
+<tr>
+<td>month：表示月份，可以是从1到12之间的任何整数。</td>
+</tr>
+<tr>
+<td>week：表示星期几，可以是从0到7之间的任何整数，这里的0或7代表星期日。</td>
+</tr>
+<tr>
+<td>command：要执行的命令，可以是系统命令，也可以是自己编写的脚本文件。</td>
+</tr>
+</tbody>
+</table>
+<h5 id="数字表达方式"><a href="#数字表达方式" class="headerlink" title="数字表达方式"></a>数字表达方式</h5><table>
+<thead>
+<tr>
+<th>* 　星号每的意思,如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>-　</strong> 减号表示一个整数范围，如:00 17-19 * * * cmd  每天下午17点，18点，19点执行一次命令</td>
+</tr>
+<tr>
+<td>, 　逗号指定一个列表范围，如:00 10-11,17-19 * * * cmd 每天的上午10,11点整，下午的17,18,19点整执行一次命令</td>
+</tr>
+<tr>
+<td>/n　n代表数字，指定时间的间隔频率，如: */2 * * * * cmd 每隔2分钟执行一次命令</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注意 :当程序在你所指定的时间执行后，系统会寄一封信给你，显示该程序执行的内容，若是你不希望收到这样的信，请在每一行空一格之后加上 &gt; /dev/null 2&gt;&amp;1 即可</strong></p>
+</blockquote>
+<h4 id="crontab文件举例"><a href="#crontab文件举例" class="headerlink" title="crontab文件举例"></a>crontab文件举例</h4><h5 id="1-每月10号及20号的3：30执行ls命令-注：“，”用来连接多个不连续的时段"><a href="#1-每月10号及20号的3：30执行ls命令-注：“，”用来连接多个不连续的时段" class="headerlink" title="1.每月10号及20号的3：30执行ls命令[注：“，”用来连接多个不连续的时段"></a>1.每月10号及20号的3：30执行ls命令[注：“，”用来连接多个不连续的时段</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">30    3     10,20     *     *     ls</div></pre></td></tr></table></figure>
+<h5 id="2-每天8-11点的第25分钟执行ls命令-注：“-”用来连接连续的时段"><a href="#2-每天8-11点的第25分钟执行ls命令-注：“-”用来连接连续的时段" class="headerlink" title="2.每天8-11点的第25分钟执行ls命令[注：“-”用来连接连续的时段]"></a>2.每天8-11点的第25分钟执行ls命令[注：“-”用来连接连续的时段]</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">25     8-11 *         *     *     ls</div></pre></td></tr></table></figure>
+<h5 id="3-每15分钟执行一次ls命令-即每个小时的第0-15-30-45-60分钟执行ls命令"><a href="#3-每15分钟执行一次ls命令-即每个小时的第0-15-30-45-60分钟执行ls命令" class="headerlink" title="3.每15分钟执行一次ls命令 [即每个小时的第0 15 30 45 60分钟执行ls命令 ]"></a>3.每15分钟执行一次ls命令 [即每个小时的第0 15 30 45 60分钟执行ls命令 ]</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*/15   *       *      *     *     ls</div></pre></td></tr></table></figure>
+<h5 id="4-每个月中，每隔10天6-30执行一次ls命令-即每月的1、11、21、31日是的6：30执行一次ls-命令。"><a href="#4-每个月中，每隔10天6-30执行一次ls命令-即每月的1、11、21、31日是的6：30执行一次ls-命令。" class="headerlink" title="4.每个月中，每隔10天6:30执行一次ls命令[即每月的1、11、21、31日是的6：30执行一次ls 命令。"></a>4.每个月中，每隔10天6:30执行一次ls命令[即每月的1、11、21、31日是的6：30执行一次ls 命令。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">30     6     */10     *     *     ls</div></pre></td></tr></table></figure>
+<h5 id="5-每晚的21-30重启-nginx。"><a href="#5-每晚的21-30重启-nginx。" class="headerlink" title="5.每晚的21:30重启 nginx。"></a>5.每晚的21:30重启 nginx。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">30     21      *      *     *  /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="6-每月1、-10、22日的4-45重启nginx。"><a href="#6-每月1、-10、22日的4-45重启nginx。" class="headerlink" title="6.每月1、 10、22日的4 : 45重启nginx。"></a>6.每月1、 10、22日的4 : 45重启nginx。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">45     4    1,10,22   *     *  /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="7-每周六、周日的1-10重启nginx。"><a href="#7-每周六、周日的1-10重启nginx。" class="headerlink" title="7.每周六、周日的1 : 10重启nginx。"></a>7.每周六、周日的1 : 10重启nginx。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">10     1      *       *   6,0  /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="8-每天18-00至23-00之间每隔30分钟重启nginx。"><a href="#8-每天18-00至23-00之间每隔30分钟重启nginx。" class="headerlink" title="8.每天18 : 00至23 : 00之间每隔30分钟重启nginx。"></a>8.每天18 : 00至23 : 00之间每隔30分钟重启nginx。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0,30 18-23    *       *     * /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="9-每星期六的11-00-pm重启nginx。"><a href="#9-每星期六的11-00-pm重启nginx。" class="headerlink" title="9.每星期六的11 : 00 pm重启nginx。"></a>9.每星期六的11 : 00 pm重启nginx。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0      23     *       *     6 /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="10-每一小时重启nginx"><a href="#10-每一小时重启nginx" class="headerlink" title="10.每一小时重启nginx"></a>10.每一小时重启nginx</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*     */1     *       *    * /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="11-晚上11点到早上7点之间，每-隔一小时重启nginx"><a href="#11-晚上11点到早上7点之间，每-隔一小时重启nginx" class="headerlink" title="11.晚上11点到早上7点之间，每 隔一小时重启nginx"></a>11.晚上11点到早上7点之间，每 隔一小时重启nginx</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*    23-7/1    *      *    * /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="12-每月的4号与每周一到周三-的11点重启nginx"><a href="#12-每月的4号与每周一到周三-的11点重启nginx" class="headerlink" title="12.每月的4号与每周一到周三 的11点重启nginx"></a>12.每月的4号与每周一到周三 的11点重启nginx</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0      11      4      * mon-wed /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="13-一月一号的4点重启nginx"><a href="#13-一月一号的4点重启nginx" class="headerlink" title="13.一月一号的4点重启nginx"></a>13.一月一号的4点重启nginx</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0      4       1      jan  *  /etc/init.d/nginx restart</div></pre></td></tr></table></figure>
+<h5 id="14-每半小时同步一下时间"><a href="#14-每半小时同步一下时间" class="headerlink" title="14.每半小时同步一下时间"></a>14.每半小时同步一下时间</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*/30   *      *      *     * /usr/sbin/ntpdate 210.72.145.20</div></pre></td></tr></table></figure>
+<h5 id="15-每1分钟执行一次command"><a href="#15-每1分钟执行一次command" class="headerlink" title="15.每1分钟执行一次command"></a>15.每1分钟执行一次command</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*      *      *      *     * command</div></pre></td></tr></table></figure>
+<h5 id="16-每隔两天的上午8点到11点的第3和第15分钟执行"><a href="#16-每隔两天的上午8点到11点的第3和第15分钟执行" class="headerlink" title="16.每隔两天的上午8点到11点的第3和第15分钟执行"></a>16.每隔两天的上午8点到11点的第3和第15分钟执行</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3,15 8-11    */2     *    * command</div></pre></td></tr></table></figure>
+<h5 id="17-每个星期一的上午8点到11点的第3和第15分钟执行"><a href="#17-每个星期一的上午8点到11点的第3和第15分钟执行" class="headerlink" title="17.每个星期一的上午8点到11点的第3和第15分钟执行"></a>17.每个星期一的上午8点到11点的第3和第15分钟执行</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">3,15 8-11    *       *    1 command</div></pre></td></tr></table></figure>
+<h5 id="18-每月1、10、22日的4-45重启smb"><a href="#18-每月1、10、22日的4-45重启smb" class="headerlink" title="18.每月1、10、22日的4 : 45重启smb"></a>18.每月1、10、22日的4 : 45重启smb</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">45    4   1,10,22    *    * /etc/init.d/smb restart</div></pre></td></tr></table></figure>
+<h5 id="19-每周六、周日的1-10重启smb"><a href="#19-每周六、周日的1-10重启smb" class="headerlink" title="19.每周六、周日的1:10重启smb"></a>19.每周六、周日的1:10重启smb</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">10    1      *       *   6,0 /etc/init.d/smb restart</div></pre></td></tr></table></figure>
+<h5 id="20-每天18-00至23-00之间每隔30分钟重启smb"><a href="#20-每天18-00至23-00之间每隔30分钟重启smb" class="headerlink" title="20.每天18 : 00至23 : 00之间每隔30分钟重启smb"></a>20.每天18 : 00至23 : 00之间每隔30分钟重启smb</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0,30 18-23    *      *    * /etc/init.d/smb restart</div></pre></td></tr></table></figure>
+<h5 id="21-晚上11点到早上7点之间，每隔一小时重启smb"><a href="#21-晚上11点到早上7点之间，每隔一小时重启smb" class="headerlink" title="21.晚上11点到早上7点之间，每隔一小时重启smb"></a>21.晚上11点到早上7点之间，每隔一小时重启smb</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*    23-7/1   *     *    * /etc/init.d/smb restart</div></pre></td></tr></table></figure>
+<h5 id="22-每月的4号与每周一到周三的11点重启smb"><a href="#22-每月的4号与每周一到周三的11点重启smb" class="headerlink" title="22.每月的4号与每周一到周三的11点重启smb"></a>22.每月的4号与每周一到周三的11点重启smb</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0    11      4     *   mon-wed /etc/init.d/smb restart</div></pre></td></tr></table></figure>
+<h5 id="23-一月一号的4点重启smb"><a href="#23-一月一号的4点重启smb" class="headerlink" title="23.一月一号的4点重启smb"></a>23.一月一号的4点重启smb</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0    4      1     jan   *  /etc/init.d/smb restart</div></pre></td></tr></table></figure>
+<h5 id="24-每天早上7点执行一次-bin-ls"><a href="#24-每天早上7点执行一次-bin-ls" class="headerlink" title="24.每天早上7点执行一次 /bin/ls :"></a>24.每天早上7点执行一次 /bin/ls :</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 7 * * * /bin/ls</div></pre></td></tr></table></figure>
+<h5 id="25-在12-月内-每天的早上-6-点到-12-点中，每隔3个小时执行一次-usr-bin-backup"><a href="#25-在12-月内-每天的早上-6-点到-12-点中，每隔3个小时执行一次-usr-bin-backup" class="headerlink" title="25. 在12 月内, 每天的早上 6 点到 12 点中，每隔3个小时执行一次 /usr/bin/backup"></a>25. 在12 月内, 每天的早上 6 点到 12 点中，每隔3个小时执行一次 /usr/bin/backup</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 6-12/3 * 12 * /usr/bin/backup</div></pre></td></tr></table></figure>
+<h5 id="26-周一到周五每天下午-5-00-寄一封信给-alex-domain-name"><a href="#26-周一到周五每天下午-5-00-寄一封信给-alex-domain-name" class="headerlink" title="26.周一到周五每天下午 5:00 寄一封信给 alex@domain.name :"></a>26.周一到周五每天下午 5:00 寄一封信给 alex@domain.name :</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 17 * * 1-5 mail -s &quot;hi&quot; alex@domain.name &lt; /tmp/maildata</div></pre></td></tr></table></figure>
+<h5 id="27-每月每天的午夜-0-点-20-分-2-点-20-分-4-点-20-分…-执行-echo-“haha”"><a href="#27-每月每天的午夜-0-点-20-分-2-点-20-分-4-点-20-分…-执行-echo-“haha”" class="headerlink" title="27.每月每天的午夜 0 点 20 分, 2 点 20 分, 4 点 20 分….执行 echo “haha”"></a>27.每月每天的午夜 0 点 20 分, 2 点 20 分, 4 点 20 分….执行 echo “haha”</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">20 0-23/2 * * * echo &quot;haha&quot;</div></pre></td></tr></table></figure>
+<h5 id="28-每天早上6点10分"><a href="#28-每天早上6点10分" class="headerlink" title="28.每天早上6点10分"></a>28.每天早上6点10分</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">10 6 * * * date</div></pre></td></tr></table></figure>
+<h5 id="29-每两个小时"><a href="#29-每两个小时" class="headerlink" title="29.每两个小时"></a>29.每两个小时</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 */2 * * * date</div></pre></td></tr></table></figure>
+<h5 id="30-晚上11点到早上8点之间每两个小时，早上8点"><a href="#30-晚上11点到早上8点之间每两个小时，早上8点" class="headerlink" title="30.晚上11点到早上8点之间每两个小时，早上8点"></a>30.晚上11点到早上8点之间每两个小时，早上8点</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 23-7/2，8 * * * date</div></pre></td></tr></table></figure>
+<h5 id="31-每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点"><a href="#31-每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点" class="headerlink" title="31.每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点"></a>31.每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 11 4 * mon-wed date</div></pre></td></tr></table></figure>
+<h5 id="32-1月份日早上4点"><a href="#32-1月份日早上4点" class="headerlink" title="32.1月份日早上4点"></a>32.1月份日早上4点</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 4 1 jan * date</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>/dev/null 2&gt;&amp;1解释</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>0       是标准输入    使用&lt;或&lt;&lt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1      是标准输出    使用&gt;或&gt;&gt;</td>
+</tr>
+<tr>
+<td>2    是标准错误输出  使用2&gt;或2&gt;&gt;</td>
+</tr>
+<tr>
+<td>>/dev/null 2&gt;&amp;1  即:错误输出与标准输出全部重定向到空,可以写成1&gt;/dev/null 2&gt;/dev/null</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="事例："><a href="#事例：" class="headerlink" title="事例："></a>事例：</h4><p>我们首先创建test.sh脚本如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#! /bin/sh</div><div class="line">echo &quot;hello, everybody, now is &quot; `date`</div><div class="line">date &gt;&gt; test.txt</div></pre></td></tr></table></figure></p>
+<p>然后添加作业<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">* * * * * /home/oracle/test.sh &gt;/home/oracle/log.txt &amp; 默认值为1，即和下面命令一致</div><div class="line">* * * * * /home/oracle/test.sh 1&gt;/home/oracle/log.txt &amp;</div><div class="line">* * * * * /home/oracle/test.sh 2&gt;/home/oracle/log.txt &amp;</div><div class="line">* * * * * /home/oracle/test.sh 2&gt;/home/oracle/log.txt 2&gt;&amp;1 &amp;</div></pre></td></tr></table></figure></p>
+<p>1,2将tesh.sh 命令输出重定向到log.txt, 即输出内容不打印到屏幕上，而是输出到log.txt文件中。如果你需要追加而不是覆盖，可以用 &gt;&gt;代替&gt;<br>2&gt;&amp;1 是将错误输出重定向到标准输出。 然后将标准输入重定向到文件log.txt。<br>&amp;1 表示的是文件描述1，表示标准输出，如果这里少了&amp;就成了数字1，就表示重定向到文件1。</p>
+<hr>
+<blockquote>
+<p>关于重定向的作用</p>
+</blockquote>
+<p>重定向到空可以避免碎片文件占用inode资源</p>
+<p>重定向到一个指定log里，可以看任务是否执行</p>
+<blockquote>
+<p>关于导致磁盘inode满情况分析</p>
+</blockquote>
+<p>　　定时任务执行成功or失败时，程序会向上层发送mail，由于平时工作中不打开sendmail功能，所以邮件会存储在临时目录/var/spool/clientmqueue，随着执行的任务次数多，文件也会越来越多，直到某一天，添加文件时，提示No space left on device，主要问题原因不在于垃圾文件会占很大空间，而在于每个文件会占用inode节点。（centos6.4默认不装sendmail,可能不会导致这个问题发生）。</p>
+<p><strong>所以crontab规则后需加 /dev/null 2&gt;&amp;1。</strong><br><strong>注：&gt;&gt; 与 &gt;/dev/null 2&gt;&amp;1不可同时存在，不然无法执行</strong></p>
+<h3 id="使用crontab工具的注意事项"><a href="#使用crontab工具的注意事项" class="headerlink" title="使用crontab工具的注意事项"></a>使用crontab工具的注意事项</h3><h4 id="注意环境变量问题"><a href="#注意环境变量问题" class="headerlink" title="注意环境变量问题"></a>注意环境变量问题</h4><p>　　有时我们创建了一个crontab，但是这个任务却无法自动执行，而手动执行这个任务却没有问题，这种情况一般是由于在crontab文件中没有配置环境变量引起的。在crontab文件中定义多个调度任务时，需要特别注意的一个问题就是环境变量的设置，因为我们手动执行某个任务时，是在当前shell环境下进行的， 程序当然能找到环境变量，而系统自动执行任务调度时，是不会加载任何环境变量的，因此，就需要在crontab文件中指定任务运行所需的所有环境变量，这样，系统执行任务调度时就没有问题了。<br>　　不要假定cron知道所需要的特殊环境，它其实并不知道。所以你要保证在shelll脚本中提供所有必要的路径和环境变量，除了一些自动设置的全局变量。所以注意如下3点：</p>
+<ul>
+<li>脚本中涉及文件路径时写全局路径；</li>
+<li>脚本执行要用到java或其他环境变量时，通过source命令引入环境变量，如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cat start_cbp.sh</div><div class="line">#!/bin/sh</div><div class="line">source /etc/profile</div><div class="line">export RUN_CONF=/home/d139/conf/platform/cbp/cbp_jboss.conf</div><div class="line">/usr/local/jboss-4.0.5/bin/run.sh -c mev &amp;</div></pre></td></tr></table></figure>
+<ul>
+<li>当手动执行脚本OK，但是crontab死活不执行时。这时必须大胆怀疑是环境变量惹的祸，并可以尝试在crontab中直接引入环境变量解决问题。如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 * * * * . /etc/profile;/bin/sh /var/www/java/audit_no_count/bin/restart_audit.sh</div></pre></td></tr></table></figure>
+<h4 id="注意清理系统用户的邮件日志"><a href="#注意清理系统用户的邮件日志" class="headerlink" title="注意清理系统用户的邮件日志"></a>注意清理系统用户的邮件日志</h4><p>　　每条任务调度执行完毕，系统都会将任务输出信息通过电子邮件的形式发送给当前系统用户，这样日积月累，日志信息会非常大，可能会影响系统的正常运行，因此，将每条任务进行重定向处理非常重要。</p>
+<p><strong>例如，可以在crontab文件中设置如下形式，忽略日志输出：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 */3 * * * /usr/local/apache2/apachectl restart &gt;/dev/null 2&gt;&amp;1</div></pre></td></tr></table></figure></p>
+<p><code>/dev/null 2&gt;&amp;1</code>表示先将标准输出重定向到/dev/null，然后将标准错误重定向到标准输出，由于标准输出已经重定向到了/dev/null，因此标准错误也会重定向到/dev/null，这样日志输出问题就解决了。<br>——————-&gt;&gt;<br><strong>为crontab中的任务增加自己的日志，这样出错后，比较容易看到原因。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 6 * * * $HOME/for_crontab/createTomorrowTables &gt;&gt; $HOME/for_crontab/mylog.log 2&gt;&amp;1</div></pre></td></tr></table></figure></p>
+<p>把错误输出和标准输出都输出到mylog.log中。<br>注意：不要写成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0 6 * * * $HOME/for_crontab/createTomorrowTables 2&gt;&amp;1 &gt;&gt; $HOME/for_crontab/mylog.log</div></pre></td></tr></table></figure></p>
+<p>否则就输出到标准输出了</p>
+<h4 id="关于导致磁盘inode满情况分析"><a href="#关于导致磁盘inode满情况分析" class="headerlink" title="关于导致磁盘inode满情况分析"></a>关于导致磁盘inode满情况分析</h4><p>　　定时任务执行成功or失败时，程序会向上层发送mail，由于平时工作中不打开sendmail功能，所以邮件会存储在临时目录<code>/var/spool/clientmqueue</code>，随着执行的任务次数多，文件也会越来越多，直到某一天，添加文件时，提示No space left on device，主要问题原因不在于垃圾文件会占很大空间，而在于每个文件会占用inode节点。（centos6.4默认不装sendmail,可能不会导致这个问题发生）。<br><strong>所以crontab规则后需加 /dev/null 2&gt;&amp;1。</strong><br><strong>注：&gt;&gt; 与 &gt;/dev/null 2&gt;&amp;1不可同时存在，不然无法执行</strong></p>
+<h4 id="系统级任务调度与用户级任务调度"><a href="#系统级任务调度与用户级任务调度" class="headerlink" title="系统级任务调度与用户级任务调度"></a>系统级任务调度与用户级任务调度</h4><p>　　系统级任务调度主要完成系统的一些维护操作，用户级任务调度主要完成用户自定义的一些任务，可以将用户级任务调度放到系统级任务调度来完成（不建议这么做），但是反过来却不行，root用户的任务调度操作可以通过<code>crontab –uroot –e</code>来设置，也可以将调度任务直接写入<code>/etc/crontab</code>文件，需要注意的是，如果要定义一个定时重启系统的任务，就必须将任务放到<code>/etc/crontab</code>文件，即使在root用户下创建一个定时重启系统的任务也是无效的。</p>
+<h4 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h4><p>　　新创建的cron job，不会马上执行，至少要过2分钟才执行。如果重启cron则马上执行。当crontab突然失效时，可以尝试<code>/etc/init.d/crond restart</code>解决问题。或者查看日志看某个job有没有执行/报错 <code>tail -f /var/log/cron</code>。千万别乱运行<code>crontab -r</code>。它从Crontab目录（<code>/var/spool/cron</code>）中删除用户的Crontab文件。删除了该用户的所有crontab都没了。<br><strong>在crontab中%是有特殊含义的，表示换行的意思。如果要用的话必须进行转义\%，如经常用的date ‘+%Y%m%d’在crontab里是不会执行的，应该换成date ‘+\%Y\%m\%d’。</strong></p>
+<h4 id="写定时任务注意点："><a href="#写定时任务注意点：" class="headerlink" title="写定时任务注意点："></a>写定时任务注意点：</h4><p>掌握了下面7点，写定时任务就不在犯错。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>注意点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>每个任务添加注释，谁写的，什么时间写的，完成什么需求?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>执行脚本使用<code>/bin/sh</code>（防止脚本无执行权限），要执行的文件路径是从根开始的绝对路径（防止找不到文件）</td>
+</tr>
+<tr>
+<td>3</td>
+<td>尽量把要执行的命令放在脚本里，然后把脚本放在定时任务里。对于调用脚本的定时任务，可以把标准输出错误输出重定向到空。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>定时任务中带%无法执行，需要加\转义</td>
+</tr>
+<tr>
+<td>5</td>
+<td>如果时上有值，分钟上必须有值</td>
+</tr>
+<tr>
+<td>6</td>
+<td>日和周不要同时使用，会冲突</td>
+</tr>
+<tr>
+<td>7</td>
+<td>>>与&gt;/dev/null 2&gt;&amp;1不要同时存在</td>
+</tr>
+</tbody>
+</table>
+<p>书写举例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#backup mysql byyangrong at 2013-9-4</div><div class="line">30 4 * * * /bin/shtar_mysql.sh &gt;/dev/null 2&gt;&amp;1</div></pre></td></tr></table></figure></p>
+<h4 id="调试定时任务"><a href="#调试定时任务" class="headerlink" title="调试定时任务"></a>调试定时任务</h4><p>　　一个任务不能轻易的直接推上线上服务器，需要在测试服务器上测试好。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>调试方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>增加频率调试任务，如:生产环境2小时一次，测试机2分钟一次</td>
+</tr>
+<tr>
+<td>2</td>
+<td>加快时间调试任务，如:生产环境1天后执行，则添加任务后修改设备时间</td>
+</tr>
+<tr>
+<td>3</td>
+<td>重定向到一个日志里，查看任务执行情况。一个是定时任务后加log，一个是脚本后加log</td>
+</tr>
+<tr>
+<td>4</td>
+<td>环境变量可能导致问题</td>
+</tr>
+<tr>
+<td>5</td>
+<td>通过日志定位问题。  <code>tail /var/log/cron</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="日志文件"><a href="#日志文件" class="headerlink" title="日志文件"></a>日志文件</h3><p>默认情况下,crontab中执行的日志写在/var/log下,如:<br>看 /var/log/cron这个文件就可以，可以用<code>tail -f /var/log/cron</code>观察<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@MLibra spool]# ll /var/log/cron*</div><div class="line">-rw-------. 1 root root 13887 11月 23 15:24 /var/log/cron</div><div class="line">-rw-------. 1 root root 19507 11月 15 03:40 /var/log/cron-20161115</div><div class="line">-rw-------. 1 root root  5738 11月 22 04:20 /var/log/cron-20161122</div></pre></td></tr></table></figure></p>
+<p>crontab的日志比较简单，当crond执行任务失败时会给用户发一封邮件。恰巧在我们的一台服务器上发现一个任务没有正常执行，而且crond发邮件也失败了。通过看mail的日志，看到是磁盘空间不足造成的。<br><strong>可以将每条 crontab中的任务增加自己的日志，有利于查找执行失败原因。</strong><br><code>0 6 * * * //root/script/ss.sh &gt;&gt; /root/for_crontab/mylog.log 2&gt;&amp;1</code><br>把错误输出和标准输出都输出到mylog.log中。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> find tar </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>

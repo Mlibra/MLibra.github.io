@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MLibra</title>
+  <subtitle>YOUR_SUBTITLE</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="YOUR_SITE/"/>
+  <updated>2017-03-06T02:12:37.247Z</updated>
+  <id>YOUR_SITE/</id>
+  
+  <author>
+    <name>YOUR_NAME</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>one</title>
+    <link href="YOUR_SITE/2017/03/06/one/"/>
+    <id>YOUR_SITE/2017/03/06/one/</id>
+    <published>2017-03-06T02:11:22.000Z</published>
+    <updated>2017-03-06T02:12:37.247Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;����һ�����Ե��ļ�one&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="YOUR_SITE/2017/03/06/hello-world/"/>
+    <id>YOUR_SITE/2017/03/06/hello-world/</id>
+    <published>2017-03-06T01:36:45.615Z</published>
+    <updated>2017-03-06T01:36:45.628Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mone</title>
+    <link href="YOUR_SITE/2017/03/02/Mone/"/>
+    <id>YOUR_SITE/2017/03/02/Mone/</id>
+    <published>2017-03-02T09:01:45.000Z</published>
+    <updated>2017-03-06T01:36:45.626Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;crontab命令&quot;&gt;&lt;a href=&quot;#crontab命令&quot; class=&quot;headerlink&quot; title=&quot;crontab命令&quot;&gt;&lt;/a&gt;crontab命令&lt;/h2&gt;&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt; 　　&lt;strong&gt;crontab&lt;/strong&gt;命令被用来提交和管理用户的需要周期性执行的任务，与windows下的计划任务类似，当安装完成操作系统后，默认会安装此服务工具，并且会自动启动crond进程，crond进程每分钟会定期检查是否有要执行的任务，如果有要执行的任务，则自动执行该任务。cron是一个常驻服务，它提供计时器的功能，让用户在特定的时间得以执行预设的指令或程序。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="find tar" scheme="YOUR_SITE/tags/find-tar/"/>
+    
+  </entry>
+  
+</feed>
