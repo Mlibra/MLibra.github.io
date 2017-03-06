@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="YOUR_SITE/"/>
-  <updated>2017-03-06T02:12:37.247Z</updated>
+  <updated>2017-03-06T02:43:32.294Z</updated>
   <id>YOUR_SITE/</id>
   
   <author>
@@ -14,6 +14,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>one</title>
+    <link href="YOUR_SITE/2017/03/06/Find/"/>
+    <id>YOUR_SITE/2017/03/06/Find/</id>
+    <published>2017-03-06T02:11:22.000Z</published>
+    <updated>2017-03-06T02:43:32.294Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是一个测试的文件find&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>one</title>
